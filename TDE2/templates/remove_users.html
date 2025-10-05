@@ -1,0 +1,11 @@
+{% extends"base.html" %} {% block content%}
+<form action="http://localhost:8000/del_user" method="post">
+    <h1>Remover Atuador</h1>
+    <select name="user" class="Input">
+        {% for key, value in devices.items() %}
+        <option>{{ key }}</option>
+        {% endfor %}
+        <p><input type="submit" value="Deletar" /></p>
+    </select>
+</form>
+{% endblock%}

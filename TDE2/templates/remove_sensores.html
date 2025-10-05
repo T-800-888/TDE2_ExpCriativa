@@ -1,0 +1,11 @@
+{% extends"base.html" %} {% block content%}
+<form action="http://localhost:8000/del_sensor" method="post">
+    <h1>Remover Sensor</h1>
+    <select name="sensor" class="Input">
+        {% for key, value in sensores.items() %}
+        <option>{{ key }}</option>
+        {% endfor %}
+        <p><input type="submit" value="Deletar" /></p>
+    </select>
+</form>
+{% endblock%}
